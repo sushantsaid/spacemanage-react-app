@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-//import axios from 'axios';
+import axios from 'axios';
 
 
 class Applications extends Component{
@@ -16,7 +16,7 @@ class Applications extends Component{
     }
 
     getApplicationData=()=>{
-  /*
+  
         axios.get('/space/application_data')
         .then(response=>{
             console.log(response.data.message);
@@ -26,7 +26,7 @@ class Applications extends Component{
         .catch(error=>{
             console.log("Error :  ; ; : "+error.message);
         })
-    */
+    
     }
 
     displayApplicationsData(data){
