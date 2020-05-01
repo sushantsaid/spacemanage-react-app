@@ -31,7 +31,7 @@ class ApplicationForm extends Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleDateChange = this.handleDateChange.bind(this);
-        //this.sendDataToServer = this.sendDataToServer.bind(this);
+        this.sendDataToServer = this.sendDataToServer.bind(this);
     }
     
 
@@ -46,7 +46,7 @@ class ApplicationForm extends Component{
         });
       };
 
-      /*
+      
       sendDataToServer=(payload)=> {
         console.log("Sending to server : "+JSON.stringify(payload));
         console.log(typeof(payload.time_in)); 
@@ -62,7 +62,7 @@ class ApplicationForm extends Component{
                 alert("Couldn't send your application : "+error.message);})
 
     };
-*/
+
 
     handleSubmit = (values) =>{
         //event.preventDefault();
@@ -88,25 +88,14 @@ class ApplicationForm extends Component{
             var confirmation=prompt("Are you sure?",JSON.stringify(payload));
             if(confirmation){
                 alert("Data Sent!");
-                //this.sendDataToServer(payload);
+                this.sendDataToServer(payload);
             }else{
 
             }
         }
         
-        
-/*
-        axios.post('/space/save',payload)
-        .then(response=>{
-            console.log(response.data.message);
-            })
-            .catch(error=>{
-                console.log("POST application",error.message);
-                alert("Couldn't send your application : "+error.message);})
-
-                /*
-        */
-        };
+    
+  };
 
         
 
